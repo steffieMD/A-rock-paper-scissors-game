@@ -4,49 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="rock-paper-scissors.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <title>Rock Paper Scissors Project</title>
   </head>
-  <body>
-    <p class="title">Rock Paper Scissors</p>
-    <button class="move-btn" onclick="playGame('Rock')">
-      <img
-        class="move-icon"
-        src="rock-paper-scissors-images/rock-emoji.png"
-        alt="rock-emoji"
-      />
-    </button>
-    <button class="move-btn" onclick="playGame('Paper')">
-      <img
-        class="move-icon"
-        src="rock-paper-scissors-images/paper-emoji.png"
-        alt="paper-emoji"
-      />
-    </button>
-    <button class="move-btn" onclick="playGame('Scissors')">
-      <img
-        class="move-icon"
-        src="rock-paper-scissors-images/scissors-emoji.png"
-        alt="scissors-emoji"
-      />
-    </button>
-    <p class="js-result result"></p>
-    <p class="js-game">
-      You
-      <img
-        class="move-icon"
-        src="rock-paper-scissors-images/rock-emoji.png"
-        alt="rock-emoji"
-      />
-      <img
-        class="move-icon"
-        src="rock-paper-scissors-images/rock-emoji.png"
-        alt="rock-emoji"
-      />
-      Computer
-    </p>
-    <p class="js-score score"></p>
-    <button
-      onclick="
+  <body
+    class="bg-dark d-flex justify-content-center align-items-center text-light"
+  >
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center text-light mt-5 p-3"
+    >
+      <p class="title">Rock Paper Scissors</p>
+      <div
+        class="container-fluid d-flex justify-content-center align-items-center p-5"
+      >
+        <button class="move-btn me-4" onclick="playGame('Rock')">
+          <img
+            class="move-icon"
+            src="rock-paper-scissors-images/rock-emoji.png"
+            alt="rock-emoji"
+          />
+        </button>
+        <button class="move-btn me-4" onclick="playGame('Paper')">
+          <img
+            class="move-icon"
+            src="rock-paper-scissors-images/paper-emoji.png"
+            alt="paper-emoji"
+          />
+        </button>
+        <button class="move-btn" onclick="playGame('Scissors')">
+          <img
+            class="move-icon"
+            src="rock-paper-scissors-images/scissors-emoji.png"
+            alt="scissors-emoji"
+          />
+        </button>
+      </div>
+
+      <p class="js-result result"></p>
+      <p class="js-game">
+        You
+        <img
+          class="move-icon"
+          src="rock-paper-scissors-images/rock-emoji.png"
+          alt="rock-emoji"
+        />
+        <img
+          class="move-icon"
+          src="rock-paper-scissors-images/rock-emoji.png"
+          alt="rock-emoji"
+        />
+        Computer
+      </p>
+      <p class="js-score score"></p>
+      <button
+        onclick="
     score.losses = 0;
     score.wins = 0;
     score.ties = 0;
@@ -54,10 +75,12 @@
     localStorage.removeItem('score')
     scoreBoardUpdate()
     "
-      class="reset-bttn"
-    >
-      Reset Score
-    </button>
+        class="reset-bttn"
+      >
+        Reset Score
+      </button>
+    </div>
+
     <script src="rock-paper-scissors.js"></script>
   </body>
 </html>
